@@ -1,0 +1,75 @@
+<template name="publicPageStudy">
+  {{#let _study = (state.get 'study')}}
+  <div class="container">
+    <div class="d-flex justify-content-between">
+      <div class="bg-warning col-3 brd-header">
+        <h1>Study Page</h1>
+      </div>
+      <a href="#" class="btn btn-primary brd-color-red">Tıkla</a>
+      <a href="#" class="btn btn-primary brd-color-green">Tıkla</a>
+    </div>
+    <div class="d-flex">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each _study}}
+
+          <tr>
+            <th scope="row">{{_id}}</th>
+            <td>{{name}}</td>
+            <td>{{number}}</td>
+            <td>
+              <div class="input-group-text brd-checkbox">
+                <input
+                  class="form-check-input mt-0"
+                  type="checkbox"
+                  value=""
+                  aria-label="Checkbox for following text input"
+                />
+              </div>
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+    <div class="d-flex">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">@</span>
+        <input
+          type="text"
+          class="form-control brd-form"
+          placeholder="Username"
+          aria-label="Username"
+          aria-describedby="basic-addon1"
+        />
+      </div>
+    </div>
+    <div class="d-flex">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">@</span>
+        <input
+          type="text"
+          class="form-control brd-form-form"
+          placeholder="Username"
+          aria-label="Username"
+          aria-describedby="basic-addon1"
+        />
+      </div>
+    </div>
+    <div class="d-flex">
+      <form action="/" class="brd-submit">
+        Enter name: <input type="text" name="fname" />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </div>
+
+  {{/let}}
+</template>
