@@ -2,17 +2,21 @@
   {{#let _study = (state.get 'study')}}
   <div class="container">
     <div class="d-flex justify-content-between">
-      <div class="bg-warning col-3 brd-header">
-        <h1>Study Page</h1>
+      <div class="col-3 brd-header">
+        <h1>Example Page</h1>
       </div>
-      <a href="#" class="btn btn-primary brd-color-red">Tıkla</a>
-      <a href="#" class="btn btn-primary brd-color-green">Tıkla</a>
+      <a href="#" class="btn btn-primary brd-color-red"
+        >Header Background Red(Click)</a
+      >
+      <a href="#" class="btn btn-primary brd-color-blue"
+        >Header Background Blue(Click)</a
+      >
     </div>
     <div class="d-flex">
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
+            <th scope="col">Student Id</th>
             <th scope="col">First</th>
             <th scope="col">Number</th>
           </tr>
@@ -25,13 +29,17 @@
             <td>{{name}}</td>
             <td>{{number}}</td>
             <td>
-              <div class="input-group-text brd-checkbox">
+              <div class="input-group-text brd-checkbox-yellow">
                 <input
                   class="form-check-input mt-0"
                   type="checkbox"
                   value=""
                   aria-label="Checkbox for following text input"
+                  id="flexCheckDefault"
                 />
+                <label class="form-check-label" for="flexCheckDefault"
+                  >Change for Yellow header(Change)</label
+                >
               </div>
             </td>
           </tr>
@@ -45,29 +53,33 @@
         <input
           type="text"
           class="form-control brd-form"
-          placeholder="Username"
-          aria-label="Username"
+          placeholder="KeyUp(use small letters)-Select work here"
+          aria-label="KeyUp"
           aria-describedby="basic-addon1"
         />
       </div>
     </div>
+
     <div class="d-flex">
       <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">@</span>
+        <span class="input-group-text" id="basic-addon2">@</span>
         <input
           type="text"
           class="form-control brd-form-form"
-          placeholder="Username"
-          aria-label="Username"
-          aria-describedby="basic-addon1"
+          placeholder="KeyDown(use big letters)"
+          aria-label="KeyDown"
+          aria-describedby="basic-addon2"
         />
       </div>
     </div>
     <div class="d-flex">
       <form action="/" class="brd-submit">
-        Enter name: <input type="text" name="fname" />
+        Enter name-Click Submit(Submit): <input type="text" name="fname" />
         <input type="submit" value="Submit" />
       </form>
+    </div>
+    <div class="d-flex mt-4">
+      <p>Right click anywhere for contextmenu</p>
     </div>
   </div>
 

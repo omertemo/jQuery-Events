@@ -27,18 +27,18 @@ Template.publicPageStudy.onRendered(function () {
 
 Template.publicPageStudy.events({
   "click .brd-color-red": function (event, template) {
-    $("h1").css("color", "red");
+    $("h1").css("background-color", "red");
     event.preventDefault();
   },
-  "click .brd-color-green": function (event, template) {
-    $("h1").css("color", "green");
+  "click .brd-color-blue": function (event, template) {
+    $("h1").css("background-color", "blue");
     event.preventDefault();
   },
-  "change .brd-checkbox": function (event, template) {
-    $("h1").css("color", "yellow");
+  "change .brd-checkbox-yellow": function (event, template) {
+    $("h1").css("background-color", "yellow");
   },
-  "contextMenu .brd-header": function (event, template) {
-    alert("contextMenu çalıştı");
+  "contextmenu .container": function (event, template) {
+    alert("ContextMenu Çalıştı");
     event.preventDefault();
   },
   "keyup .brd-form": function (event, template) {
@@ -47,7 +47,7 @@ Template.publicPageStudy.events({
   },
   "keydown .brd-form-form": function (event, template) {
     $(".brd-form-form").val($(".brd-form-form").val().toLowerCase());
-    event.preventDefault();
+    // event.preventDefault(); Fonksiyonun çalışmasını engelliyor
   },
   "submit .brd-submit": function (event, template) {
     alert("Submit edildi");
